@@ -1,0 +1,52 @@
+{
+  "summary": [
+    {
+      "name": "John Smith",
+      "linkedin": {
+        "username": "johnsmith",
+        "top_posts": [
+          {
+            "title": "How to build a successful career in tech",
+            "content": "Here are some tips for building a successful career in the tech industry.",
+            "url": "https://www.linkedin.com/posts/johnsmith_career-tech-success-activity-123456789"
+          }
+        ]
+      },
+      "twitter": {
+        "handle": "@johnsmith",
+        "top_posts": [
+          {
+            "text": "Excited to announce our latest product release! Check it out here:",
+            "url": "https://twitter.com/johnsmith/status/123456789",
+            "retweets": 10,
+            "favorites": 20
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jane Doe",
+      "linkedin": {
+        "username": "janedoe",
+        "top_posts": [
+          {
+            "title": "The benefits of remote work for employers and employees",
+            "content": "Remote work can be beneficial for both employers and employees. Here's why.",
+            "url": "https://www.linkedin.com/posts/janedoe_remote-work-benefits-activity-456789012"
+          }
+        ]
+      },
+      "twitter": {
+        "handle": "@janedoe",
+        "top_posts": [
+          {
+            "text": "Just launched a new product! Check it out here:",
+            "url": "https://twitter.com/janedoe/status/456789012",
+            "retweets": 10,
+            "favorites": 20
+          }
+        ]
+      }
+    }
+  ]
+}
