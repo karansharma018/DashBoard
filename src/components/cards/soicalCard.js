@@ -19,17 +19,13 @@ function BgColorExample({ item, isLinkedIn, name }) {
                 <Card.Text>{item.username || item.handle}</Card.Text>
               </div>
             </div>
-            {item.top_posts[0].title && (
-              <Card.Text className="mb-1 fw-bold fs-6">
-                {item.top_posts[0].title}
-              </Card.Text>
+            {item.title && (
+              <Card.Text className="mb-1 fw-bold fs-6">{item.title}</Card.Text>
             )}
-            <Card.Text className="mb-1">
-              {item.top_posts[0].text || item.top_posts[0].content}
-            </Card.Text>
-            <Card.Text className="mb-0">
+            <Card.Text className="mb-1">{item.text || item.content}</Card.Text>
+            {/* <Card.Text className="mb-0">
               <a
-                href={item.top_posts[0].url}
+                href={item.url}
                 target="_blank"
                 className="text-decoration-underline fw-bold"
                 style={{
@@ -38,7 +34,7 @@ function BgColorExample({ item, isLinkedIn, name }) {
               >
                 View more
               </a>
-            </Card.Text>
+            </Card.Text> */}
           </Stack>
           <Stack
             className={`d-flex align-items-center flex-row gap-2 ${
@@ -53,11 +49,11 @@ function BgColorExample({ item, isLinkedIn, name }) {
               <Stack className=" d-flex flex-row gap-2 align-items-center">
                 <Card.Text className="mb-0">
                   <i class="fa fa-heart-o" aria-hidden="true"></i>{" "}
-                  {item.top_posts[0].favorites}
+                  {item.favorites}
                 </Card.Text>
                 <Card.Text className="mb-0">
                   <i class="fa fa-retweet me-1" aria-hidden="true"></i>
-                  {item.top_posts[0].retweets}
+                  {item.retweets}
                 </Card.Text>
               </Stack>
             )}

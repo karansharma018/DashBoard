@@ -2,6 +2,8 @@ import React from "react";
 import adminLayout from "../hoc/adminLayout";
 import Posts from "../components/posts";
 import "../assets/css/dashboard.css";
+import data from "../components/posts/data.json";
+import _ from "lodash";
 class DashboardPage extends React.Component {
   constructor(props) {
     super(props);
@@ -10,6 +12,15 @@ class DashboardPage extends React.Component {
   }
 
   render() {
+    const linkedInLength = _.countBy(
+      data.summary.flatMap((user) => user.linkedin.top_posts)
+    );
+    const twitterLength = _.countBy(
+      data.summary.flatMap((user) => user.twitter.top_posts)
+    );
+    console.log(
+      linkedInLength["[object Object]"] + twitterLength["[object Object]"]
+    );
     return (
       <div className="dashboard-main">
         <div className="row ">
@@ -17,9 +28,17 @@ class DashboardPage extends React.Component {
             <div className="card text-white bg-primary o-hidden h-100">
               <div className="card-body">
                 <div className="card-body-icon">
-                  <i className="fa fa-fw fa-comments"></i>
+                  <i
+                    class="fa fa-twitter"
+                    aria-hidden="true"
+                    style={{
+                      color: "#fff",
+                    }}
+                  ></i>
                 </div>
-                <div className="mr-5">26 New Messages!</div>
+                <div className="mr-5">
+                  {twitterLength["[object Object]"]} Twitter Posts
+                </div>
               </div>
               <a className="card-footer text-white clearfix small z-1" href="#">
                 <span className="float-left">View Details</span>
@@ -33,9 +52,17 @@ class DashboardPage extends React.Component {
             <div className="card text-white bg-warning o-hidden h-100">
               <div className="card-body">
                 <div className="card-body-icon">
-                  <i className="fa fa-fw fa-list"></i>
+                  <i
+                    class="fa fa-linkedin-square"
+                    aria-hidden="true"
+                    style={{
+                      color: "#fff",
+                    }}
+                  ></i>
                 </div>
-                <div className="mr-5">11 New Tasks!</div>
+                <div className="mr-5">
+                  {linkedInLength["[object Object]"]} Linkedin Posts
+                </div>
               </div>
               <a className="card-footer text-white clearfix small z-1" href="#">
                 <span className="float-left">View Details</span>
@@ -49,9 +76,13 @@ class DashboardPage extends React.Component {
             <div className="card text-white bg-success o-hidden h-100">
               <div className="card-body">
                 <div className="card-body-icon">
-                  <i className="fa fa-fw fa-shopping-cart"></i>
+                  <i className="fa fa-file-o"></i>
                 </div>
-                <div className="mr-5">123 New Orders!</div>
+                <div className="mr-5">
+                  {linkedInLength["[object Object]"] +
+                    twitterLength["[object Object]"]}{" "}
+                  Total Posts
+                </div>
               </div>
               <a className="card-footer text-white clearfix small z-1" href="#">
                 <span className="float-left">View Details</span>

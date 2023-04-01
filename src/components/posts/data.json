@@ -9,12 +9,29 @@
             "title": "How to build a successful career in tech",
             "content": "Here are some tips for building a successful career in the tech industry.",
             "url": "https://www.linkedin.com/posts/johnsmith_career-tech-success-activity-123456789"
+          },
+          {
+            "title": "How to build a successful career in tech",
+            "content": "Here are some tips for building a successful career in the tech industry.",
+            "url": "https://www.linkedin.com/posts/johnsmith_career-tech-success-activity-123456789"
           }
         ]
       },
       "twitter": {
         "handle": "@johnsmith",
         "top_posts": [
+          {
+            "text": "Excited to announce our latest product release! Check it out here:",
+            "url": "https://twitter.com/johnsmith/status/123456789",
+            "retweets": 10,
+            "favorites": 20
+          },
+          {
+            "text": "Excited to announce our latest product release! Check it out here:",
+            "url": "https://twitter.com/johnsmith/status/123456789",
+            "retweets": 10,
+            "favorites": 20
+          },
           {
             "text": "Excited to announce our latest product release! Check it out here:",
             "url": "https://twitter.com/johnsmith/status/123456789",
