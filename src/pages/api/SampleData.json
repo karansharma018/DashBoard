@@ -1,0 +1,84 @@
+{
+    "ml": {
+      "blogs": [
+        {
+          "title": "Machine Learning Mastery",
+          "url": "https://machinelearningmastery.com/"
+        }
+      ],
+      "research_papers": [
+        {
+          "title": "A Few Useful Things to Know About Machine Learning",
+          "authors": ["Pedro Domingos"],
+          "url": "https://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf"
+        }
+      ],
+      "authors": [
+        {
+          "name": "Geoffrey Hinton",
+          "url": "https://www.cs.toronto.edu/~hinton/"
+        }
+      ],
+      "videos": [
+        {
+          "title": "Stanford CS229: Machine Learning",
+          "url": "https://www.youtube.com/playlist?list=PLA89DCFA6ADACE599"
+        }
+      ]
+    },
+    "ai": {
+      "blogs": [
+        {
+          "title": "AI Trends",
+          "url": "https://www.aitrends.com/"
+        }
+      ],
+      "research_papers": [
+        {
+          "title": "Generative Pre-trained Transformer 3 (GPT-3)",
+          "authors": ["Tom B. Brown", "Benjamin Mann", "Nick Ryder", "et al."],
+          "url": "https://arxiv.org/abs/2005.14165"
+        }
+      ],
+      "authors": [
+        {
+          "name": "Ian Goodfellow",
+          "url": "https://www.cs.mcgill.ca/~jpineau/comp767-04/readings/Goodfellow-et-al-2016.pdf"
+        }
+      ],
+      "videos": [
+        {
+          "title": "MIT Introduction to Deep Learning",
+          "url": "https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI"
+        }
+      ]
+    },
+    "ds": {
+      "blogs": [
+        {
+          "title": "Towards Data Science",
+          "url": "https://towardsdatascience.com/"
+        }
+      ],
+      "research_papers": [
+        {
+          "title": "A Survey on Data Science",
+          "authors": ["Katarzyna Musial-Gabrys", "Marek Gabrys"],
+          "url": "https://www.sciencedirect.com/science/article/pii/S2405452618301296"
+        }
+      ],
+      "authors": [
+        {
+          "name": "Hadley Wickham",
+          "url": "http://hadley.nz/"
+        }
+      ],
+      "videos": [
+        {
+          "title": "Harvard CS109: Data Science",
+          "url": "https://www.youtube.com/playlist?list=PL2SOU6wwxB0uwwH80KTQ6ht66KWxbzTIo"
+        }
+      ]
+    }
+  }
+  
