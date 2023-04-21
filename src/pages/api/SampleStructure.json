@@ -1,0 +1,31 @@
+{
+    "Query Name": {
+      "blogs": [
+        {
+          "title": "//Dummy Data",
+          "url":"//Dummy Data"
+        }
+      ],
+      "research_papers": [
+        {
+          "title": "//Dummy Data",
+          "authors": "//Dummy Data",
+          "url": "//Dummy Data"
+        }
+      ],
+      "authors": [
+        {
+          "name": "//Dummy Data",
+          "url": "//Dummy Data"
+        }
+      ],
+      "videos": [
+        {
+          "title": "//Dummy Data",
+          "url": "//Dummy Data"
+        }
+      ]
+    }
+   
+  }
+  
