@@ -4,14 +4,14 @@ import { Form, FormControl, Button } from "react-bootstrap";
 const SearchBar = ({ search, setsearch, onsubmit }) => {
   return (
     <Form
-      onSubmit={onsubmit}
+      onSubmit={(e) => onsubmit(e)}
       inline="true"
       className="d-flex justify-content-around container"
     >
       <FormControl
         type="text"
         value={search}
-        onChange={setsearch}
+        onChange={(e) => setsearch(e.target.value)}
         placeholder="Search"
         className="mr-sm-2"
       />

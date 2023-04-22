@@ -4,6 +4,7 @@ import SearchBar from "../components/searchbar/SearchBar";
 import { Preloader, Bars } from "react-preloader-icon";
 import { Card, Stack } from "react-bootstrap";
 import Data from "./api/SampleData.json";
+import { handler } from "./api/generate";
 console.log(Data);
 const Keys = Object.entries(Data);
 
@@ -27,7 +28,7 @@ class AdminBlankPage extends React.Component {
     super(props);
 
     this.state = { search: "", Result: [], loading: false, Data: Keys };
-    console.log(Keys);
+    this.onSubmit = this.onSubmit.bind(this);
   }
   handleSearch = (value) => {
     this.setState({
@@ -39,40 +40,24 @@ class AdminBlankPage extends React.Component {
     this.setState({
       loading: true,
     });
-    try {
-      const response = await fetch("/api/generate", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ search: this.search }),
-      });
 
-      const data = await response.json();
-      if (response.status !== 200) {
-        throw (
-          data.error ||
-          new Error(`Request failed with status ${response.status}`)
-        );
-      }
+    const response = await handler(this.state.search);
 
-      this.setState({
-        Result: data.result,
-      });
-      this.setState({
-        loading: false,
-      });
-      this.handleSearch("");
-    } catch (error) {
-      // Consider implementing your own error handling logic here
-      console.error(error);
-      alert(error.message);
-    }
+    const data = await response;
+
+    this.setState({
+      Result: data.result,
+    });
+    this.setState({
+      loading: false,
+    });
+    this.handleSearch("");
+    console.log(data, response);
   }
 
   render() {
     return this.state.loading ? (
-      Loader
+      <Loader />
     ) : (
       <>
         <SearchBar
